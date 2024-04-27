@@ -25,16 +25,15 @@ addLayer("p", {
             title: "You Gotta Start Somewhere!",
             description: "Doubles your point gain!",
             cost: new Decimal(1),
-        },
+            },
         12: {
-            title: "A Lil Faster!",
-            description: "Gain More Points Based On Your Prestige Points!",
-            cost: new Decimal(5),
+            title: "A Lil Faster",
+            description: "Gain More Points Based ON Your Prestige Points!",
+            cost: new Decimal(3),
             effect() {
                 return player[this.layer].points.add(1).pow(0.5)
             },
-            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
-        },
+            effectdisplay() { return format(upgradeEffect(this.layer, this.id))+"x" },
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
