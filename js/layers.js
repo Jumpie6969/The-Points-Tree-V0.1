@@ -27,13 +27,13 @@ addLayer("p", {
             cost: new Decimal(1),
         },
         12: {
+            title: "A Lil Faster!",
+            description: "Gain More Points Based On Your Prestige Points!",
+            cost: new Decimal(5),
             effect() {
                 return player[this.layer].points.add(1).pow(0.5)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
-            title: "A Lil Faster!",
-            description: "Gain More Points Based On Your Prestige Points!",
-            cost: new Decimal(5),
         },
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
